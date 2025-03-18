@@ -2,7 +2,6 @@ import requests
 import pandas as pd
 from datetime import datetime
 
-
 # URL base da API para consultas SQL
 url = "https://dadosabertos.aneel.gov.br/api/3/action/datastore_search_sql"
 
@@ -58,5 +57,8 @@ if not tarifas_vencidas.empty:
 
 # Salva o DataFrame atualizado em um arquivo CSV
 df.to_csv("dados_aneel.csv", index=False, sep = ';', decimal= ',')
-df.to_parquet("BaseAneel.parquet")
 print(f"Tabela exportada com sucesso para '{"dados_aneel.csv"}'.")
+
+#Salvar o DataFrame atualizado em um arquivo parquet
+df.to_parquet("dados_aneel.parquet")
+print(f"Tabela exportada com sucesso para 'dados_aneel.parquet'.")
