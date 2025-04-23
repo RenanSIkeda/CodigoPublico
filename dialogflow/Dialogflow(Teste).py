@@ -5,14 +5,14 @@ from google.api_core.exceptions import GoogleAPICallError
 
 # --- Configuration ---
 # Option 1: Set variables directly (replace with your actual values)
-project_id = "your-gcp-project-id"
-session_id = str(uuid.uuid4()) # Generate a unique session ID
+# project_id = "your-gcp-project-id"
+# session_id = str(uuid.uuid4()) # Generate a unique session ID
 
 # Option 2: Load from environment variables (Recommended)
 # Make sure to set these environment variables in your system
-# project_id = os.getenv("GOOGLE_CLOUD_PROJECT")
-# if not project_id:
-#     raise ValueError("GOOGLE_CLOUD_PROJECT environment variable not set.")
+project_id = os.getenv("GOOGLE_CLOUD_PROJECT")
+if not project_id:
+    raise ValueError("GOOGLE_CLOUD_PROJECT environment variable not set.")
 
 # Generate a unique session ID for this run
 session_id = str(uuid.uuid4())
