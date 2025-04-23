@@ -2,7 +2,6 @@ import os
 import uuid
 from google.cloud import dialogflow_v2 as dialogflow
 from google.api_core.exceptions import GoogleAPICallError
-
 # --- Configuration ---
 # Option 1: Set variables directly (replace with your actual values)
 # project_id = "your-gcp-project-id"
