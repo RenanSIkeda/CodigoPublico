@@ -1,4 +1,6 @@
 # Dados capturados a partir da API BrasilAPI para CNPJ, organizados em um DataFrame do Pandas e exportados para um arquivo CSV.
+# Link para o site https://brasilapi.com.br/docs#tag/Termos-de-uso
+#https://brasilapi.com.br/
 
 import requests
 import time
